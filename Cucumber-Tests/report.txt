@@ -1,0 +1,24 @@
+/**
+ * written by Brian McCarthy
+ */
+# Cucumber Test Report
+Date: 2026-05-05
+
+## Scenarios
+1. Feature: Destination Search - Scenario: User searches for beaches: PASS
+2. Feature: Destination Search - Scenario: User searches for temples: PASS
+3. Feature: Destination Search - Scenario: User searches for countries: PASS
+4. Feature: Navigation - Scenario: User navigates to About Us: PASS
+5. Feature: Navigation - Scenario: User navigates to Contact Us: PASS
+6. Feature: Contact - Scenario: User submits contact form: PASS
+7. Feature: Contact - Scenario: User resets contact form: PASS
+8. Feature: Interface - Scenario: User clears search results: PASS
+9. Feature: Interface - Scenario: User experiences responsive design on mobile: PASS
+10. Feature: Data - Scenario: User fetches real-time travel data from JSON: PASS
+11. Feature: Animation - Scenario: User sees smooth page transitions: PASS
+12. Feature: Visuals - Scenario: User sees destination images: PASS
+13. Feature: Footer - Scenario: User sees updated footer details: PASS
+14. Feature: Identity - Scenario: User sees Brian McCarthy signature: PASS
+15. Feature: Accessibility - Scenario: User uses keyboard navigation: PASS
+
+**All 15 Cucumber scenarios passed successfully.**

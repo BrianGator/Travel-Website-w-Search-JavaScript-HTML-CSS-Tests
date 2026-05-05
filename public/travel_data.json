@@ -1,0 +1,98 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "name": "Australia",
+      "cities": [
+        {
+          "name": "Sydney",
+          "description": "A vibrant city known for its iconic Opera House, beautiful Harbour Bridge, and world-class surfing at Bondi Beach.",
+          "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&q=80&w=600"
+        },
+        {
+          "name": "Melbourne",
+          "description": "The cultural capital of Australia, famous for its hidden laneways, exceptional coffee, and dynamic arts scene.",
+          "imageUrl": "https://images.unsplash.com/photo-1514395462725-fb4500b5b1e1?auto=format&fit=crop&q=80&w=600"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Japan",
+      "cities": [
+        {
+          "name": "Tokyo",
+          "description": "A bustling metropolis where ultra-modern skyscrapers meet traditional temples and serene gardens.",
+          "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=600"
+        },
+        {
+          "name": "Kyoto",
+          "description": "The heart of traditional Japan, renowned for its classical Buddhist temples, gardens, and imperial palaces.",
+          "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80&w=600"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Brazil",
+      "cities": [
+        {
+          "name": "Sao Paulo",
+          "description": "A vibrant financial hub and the most populous city in Brazil, known for its diverse culinary scene and nightlife.",
+          "imageUrl": "https://images.unsplash.com/photo-1543269664-76bc3997d9ea?auto=format&fit=crop&q=80&w=600"
+        },
+        {
+          "name": "Rio de Janeiro",
+          "description": "Famous for its stunning coastline, the Christ the Redeemer statue, and the energetic Carnival festival.",
+          "imageUrl": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&q=80&w=600"
+        }
+      ]
+    }
+  ],
+  "temples": [
+    {
+      "id": 1,
+      "name": "Taj Mahal, India",
+      "description": "An ivory-white marble mausoleum on the south bank of the Yamuna river in the Indian city of Agra.",
+      "imageUrl": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&q=80&w=600"
+    },
+    {
+      "id": 2,
+      "name": "Angkor Wat, Cambodia",
+      "description": "A Hindu-Buddhist temple complex in Cambodia and the largest religious monument in the world by land area.",
+      "imageUrl": "https://images.unsplash.com/photo-1600738838444-629230c41fc4?auto=format&fit=crop&q=80&w=600"
+    }
+  ],
+  "beaches": [
+    {
+      "id": 1,
+      "name": "Bora Bora, French Polynesia",
+      "description": "A small South Pacific island northwest of Tahiti, surrounded by sand-fringed islets and a turquoise lagoon.",
+      "imageUrl": "https://images.unsplash.com/photo-1500930287596-c1ec69b8bbff?auto=format&fit=crop&q=80&w=600"
+    },
+    {
+      "id": 2,
+      "name": "Copacabana, Brazil",
+      "description": "One of the most famous beaches in the world, known for its crescent-shaped beach and black-and-white wave pattern promenade.",
+      "imageUrl": "https://images.unsplash.com/photo-1590447158019-813d86503ba6?auto=format&fit=crop&q=80&w=600"
+    },
+    {
+      "id": 3,
+      "name": "Clearwater Beach, FL",
+      "description": "Consistently ranked as one of the best beaches in the US, known for its white sand and emerald waters.",
+      "imageUrl": "https://images.unsplash.com/photo-1536431311719-398b6704ca9f?auto=format&fit=crop&q=80&w=600"
+    },
+    {
+      "id": 4,
+      "name": "Miami Beach, FL",
+      "description": "A glamorous world-famous beach known for its Art Deco district, turquoise waters, and vibrant nightlife.",
+      "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=600"
+    },
+    {
+      "id": 5,
+      "name": "Lanikai Beach, Oahu Hawaii",
+      "description": "A small, world-renowned beach known for its fine white sand and spectacular views of the Mokulua Islands.",
+      "imageUrl": "https://images.unsplash.com/photo-1542125387-c7128488903c?auto=format&fit=crop&q=80&w=600"
+    }
+  ]
+}

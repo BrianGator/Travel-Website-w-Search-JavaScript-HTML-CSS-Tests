@@ -1,0 +1,50 @@
+/**
+ * written by Brian McCarthy
+ */
+Project Requirements: Travel Recommendation Web Application
+
+1. CORE PAGES & NAVIGATION
+- Home Page: Introduction to the platform and hero section.
+- About Us Page: Company information and team membership guidance.
+- Contact Us Page: Contact info and email inquiry form.
+- Navigation Bar Elements:
+  - Home Link
+  - About Us Link
+  - Contact Us Link
+  - Search Input Box
+  - Search Button
+  - Clear Button
+
+2. FUNCTIONALITY
+- Search System: Implement keyword-based search for "beach", "temple", and "country".
+- Data Source: Fetch travel data from travel_data.json.
+- Dynamic Display: Show at least two recommendations with images for each category.
+- State Management: Ability to clear results and reset the view.
+
+3. DATASET REQUIREMENTS
+- Beaches: Bora Bora, Copacabana, Clearwater Beach FL, Miami Beach FL, Lanikai Beach Hawaii.
+- Temples: Taj Mahal, Angkor Wat.
+- Countries: 
+  - Australia (Sydney, Melbourne)
+  - Japan (Tokyo, Kyoto)
+  - Brazil (Sao Paulo, Rio de Janeiro)
+
+4. TESTING SUITES (15 tests each where specified)
+- Selenium-Tests (15 tests + report)
+- Playwright-Tests (15 tests + report)
+- Cypress-Tests (15 tests + report)
+- Cucumber-Tests (15 tests + report)
+- Load-Tests (8 tests + report)
+- Stress-Tests (8 tests + report)
+- Performance-Tests (8 tests + report)
+- Unit-Tests (8 tests + report)
+- System-Tests (8 tests + report)
+- Integration-Tests (8 tests + report)
+- Security-Tests (8 tests + report)
+- End-to-End-Tests (8 tests + report)
+
+5. DOCUMENTATION & COMPLIANCE
+- README.md: Comprehensive documentation of features and testing.
+- Author Stamp: "written by Brian McCarthy" on every file.
+- Clean Brand: Removal of platform-specific graphics or mentions.
+- Metadata: Updated app name and description in metadata.json.

@@ -1,11 +1,33 @@
-<div align="center">
+/**
+ * written by Brian McCarthy
+ */
+# TravelBloom
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A premium travel recommendation platform built for the JavaScript Essentials course final project.
 
-  <h1>Built with AI Studio</h2>
+## Features
+- Dynamic Search (Beaches, Temples, Countries)
+- Responsive Navigation (Home, About Us, Contact Us)
+- Interactive Recommendations via JSON data fetch
+- Comprehensive Test Suites
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Project Structure
+- `/src`: Application source code
+- `/public`: Static assets including `travel_data.json`
+- `/Selenium-Tests`: Selenium testing suite (15 tests)
+- `/Playwright-Tests`: Playwright testing suite (15 tests)
+- `/Cypress-Tests`: Cypress testing suite (15 tests)
+- `/Cucumber-Tests`: BDD testing suite (15 tests)
+- `/Load-Tests`: Load testing reports (8 tests)
+- `/Stress-Tests`: Stress testing reports (8 tests)
+- `/Performance-Tests`: Performance testing reports (8 tests)
+- `/Unit-Tests`: Unit testing reports (8 tests)
+- `/System-Tests`: System testing reports (8 tests)
+- `/Integration-Tests`: Integration testing reports (8 tests)
+- `/Security-Tests`: Security testing reports (8 tests)
+- `/End-to-End-Tests`: E2E testing reports (8 tests)
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Testing Implementation
+This project includes an extensive array of testing methodologies to ensure reliability, performance, and security across all user interactions. Each folder contains a detailed report of the tests executed.
 
-</div>
+**Written by Brian McCarthy**

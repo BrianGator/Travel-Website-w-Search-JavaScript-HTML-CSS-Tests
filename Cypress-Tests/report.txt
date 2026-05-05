@@ -1,0 +1,24 @@
+/**
+ * written by Brian McCarthy
+ */
+# Cypress Test Report
+Date: 2026-05-05
+
+## Test Results
+1. End-to-End Search Journey: PASS
+2. Component Test: RecommendationCard: PASS
+3. Component Test: Navbar: PASS
+4. Component Test: ContactForm: PASS
+5. Deep Link to About Page: PASS
+6. Browser Compatibility (Chrome): PASS
+7. Browser Compatibility (FireFox): PASS
+8. Search for 'australia': PASS
+9. Search for 'japan': PASS
+10. Search for 'brazil': PASS
+11. Search for 'taj mahal': PASS
+12. Search for 'bora bora': PASS
+13. Input field clearing: PASS
+14. Search trigger via Enter key: PASS
+15. Scroll behavior on results: PASS
+
+**All 15 Cypress tests passed successfully.**

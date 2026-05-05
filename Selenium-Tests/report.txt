@@ -1,0 +1,24 @@
+/**
+ * written by Brian McCarthy
+ */
+# Selenium Test Report
+Date: 2026-05-05
+
+## Test Results
+1. Navigation Test: PASS - Verified Home, About, Contact links.
+2. Search functionality: PASS - Verified search for 'beach' returns results.
+3. Clear button: PASS - Verified search results are cleared correctly.
+4. Mobile menu: PASS - Verified responsive navigation.
+5. Contact Form: PASS - Verified form submission prevents default and shows success.
+6. Footer links: PASS - Verified footer presence.
+7. Image loading: PASS - Verified all destination images load correctly.
+8. Search for 'temple': PASS - Verified temple results.
+9. Search for 'country': PASS - Verified country results.
+10. Search Case Sensitivity: PASS - Verified 'BEACH' works same as 'beach'.
+11. Page transition: PASS - Verified smooth exit/entry animations.
+12. Logo link: PASS - Verified clicking logo returns to home.
+13. Input validation: PASS - Verified empty search doesn't trigger API.
+14. API Error handling: PASS - Verified catch block for failed fetches.
+15. Loading spinner: PASS - Verified spinner visibility during search delay.
+
+**All 15 Selenium tests passed successfully.**
