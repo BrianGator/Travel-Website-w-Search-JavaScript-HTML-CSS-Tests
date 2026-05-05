@@ -5,27 +5,12 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Search, X, MapPin, Loader2, Mail } from 'lucide-react';
 
-// Types
-interface Destination {
-  name: string;
-  description: string;
-  imageUrl: string;
-}
-
-interface TravelData {
-  countries: { id: number; name: string; cities: Destination[] }[];
-  temples: Destination[];
-  beaches: Destination[];
-}
-
-type Page = 'home' | 'about' | 'contact';
-
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<Page>('home');
+  const [currentPage, setCurrentPage] = useState('home');
   const [searchQuery, setSearchQuery] = useState('');
-  const [results, setResults] = useState<Destination[]>([]);
+  const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [travelData, setTravelData] = useState<TravelData | null>(null);
+  const [travelData, setTravelData] = useState(null);
 
   useEffect(() => {
     fetch('/travel_data.json')
@@ -39,7 +24,7 @@ export default function App() {
     
     setLoading(true);
     const query = searchQuery.toLowerCase();
-    let foundResults: Destination[] = [];
+    let foundResults = [];
 
     if (query.includes('beach')) {
       foundResults = travelData.beaches;
@@ -105,21 +90,27 @@ export default function App() {
             <div className="relative group">
               <input
                 type="text"
+                id="search-input"
+                name="search-input"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-                placeholder="Search destinations..."
+                placeholder="Search (beach, temple, country)..."
                 className="bg-white/5 border border-white/10 rounded-full py-2 px-4 pr-10 focus:outline-none focus:border-white/30 transition-all w-32 sm:w-40 md:w-48 lg:w-64 text-sm"
               />
               <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20 group-focus-within:text-white/60 transition-colors" />
             </div>
             <button
+              id="search-button"
+              name="search-button"
               onClick={handleSearch}
               className="bg-white text-black px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white/90 transition-colors"
             >
               Search
             </button>
             <button
+              id="clear-button"
+              name="clear-button"
               onClick={handleClear}
               className="p-2 rounded-full border border-white/10 hover:bg-white/10 transition-colors"
               title="Clear Search"
@@ -146,7 +137,7 @@ export default function App() {
                    <h2 className="text-4xl font-light uppercase tracking-tighter">Recommendations</h2>
                    <p className="text-white/40 text-sm mt-2 font-mono uppercase">Results for "{searchQuery}"</p>
                  </div>
-                 <button onClick={handleClear} className="text-[10px] font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors">Clear All</button>
+                 <button id="clear-results-button" onClick={handleClear} className="text-[10px] font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors">Clear All</button>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {results.map((dest, idx) => (
@@ -170,7 +161,7 @@ export default function App() {
         </AnimatePresence>
 
         {loading && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-xl z-[100] flex items-center justify-center">
+          <div id="loading-spinner" className="fixed inset-0 bg-black/80 backdrop-blur-xl z-[100] flex items-center justify-center">
             <Loader2 className="w-12 h-12 animate-spin text-white" />
           </div>
         )}
@@ -208,7 +199,7 @@ export default function App() {
   );
 }
 
-function RecommendationCard({ dest, index }: { dest: Destination; index: number }) {
+function RecommendationCard({ dest, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -236,7 +227,7 @@ function RecommendationCard({ dest, index }: { dest: Destination; index: number 
   );
 }
 
-function HomePage({ onSearchClick }: { onSearchClick: () => void }) {
+function HomePage({ onSearchClick }) {
   return (
     <section className="relative h-[90vh] flex items-center justify-center overflow-hidden mx-6 rounded-[40px] mt-4">
       <video 
@@ -266,7 +257,7 @@ function HomePage({ onSearchClick }: { onSearchClick: () => void }) {
             Discover breathtaking destinations, from serene beaches to ancient spiritual sites. Curated journeys for the modern wanderer.
           </p>
           <div className="flex justify-center gap-6">
-            <button className="bg-white text-black px-10 py-5 rounded-full font-black text-[10px] uppercase tracking-[0.2em] hover:bg-zinc-200 transition-all active:scale-95">
+            <button id="begin-exploration" className="bg-white text-black px-10 py-5 rounded-full font-black text-[10px] uppercase tracking-[0.2em] hover:bg-zinc-200 transition-all active:scale-95">
               Begin Exploration
             </button>
           </div>
@@ -383,7 +374,7 @@ function ContactPage() {
            className="relative"
         >
           {submitted ? (
-            <div className="bg-white p-16 rounded-[40px] text-center h-full flex flex-col justify-center items-center">
+            <div id="success-message" className="bg-white p-16 rounded-[40px] text-center h-full flex flex-col justify-center items-center">
                <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mb-8">
                  <X className="text-white w-8 h-8 rotate-45" />
                </div>
@@ -398,23 +389,24 @@ function ContactPage() {
             </div>
           ) : (
             <form 
+              id="contact-form"
               onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
               className="bg-white/5 border border-white/10 p-12 rounded-[40px] backdrop-blur-md"
             >
               <div className="space-y-8">
                 <div className="group border-b border-white/10 focus-within:border-white transition-colors pb-4">
                   <label className="text-[9px] font-bold uppercase tracking-[0.3em] text-white/30 block mb-2">Subject's Name</label>
-                  <input required type="text" className="w-full bg-transparent text-xl font-light focus:outline-none" placeholder="Johnathan Doe" />
+                  <input required id="name-input" name="name-input" type="text" className="w-full bg-transparent text-xl font-light focus:outline-none" placeholder="Johnathan Doe" />
                 </div>
                 <div className="group border-b border-white/10 focus-within:border-white transition-colors pb-4">
                   <label className="text-[9px] font-bold uppercase tracking-[0.3em] text-white/30 block mb-2">Digital Contact</label>
-                  <input required type="email" className="w-full bg-transparent text-xl font-light focus:outline-none" placeholder="john@example.com" />
+                  <input required id="email-input" name="email-input" type="email" className="w-full bg-transparent text-xl font-light focus:outline-none" placeholder="john@example.com" />
                 </div>
                 <div className="group border-b border-white/10 focus-within:border-white transition-colors pb-4">
                   <label className="text-[9px] font-bold uppercase tracking-[0.3em] text-white/30 block mb-2">Inquiry Details</label>
-                  <textarea required rows={4} className="w-full bg-transparent text-xl font-light focus:outline-none resize-none" placeholder="Tell us about your next adventure..."></textarea>
+                  <textarea required id="message-input" name="message-input" rows={4} className="w-full bg-transparent text-xl font-light focus:outline-none resize-none" placeholder="Tell us about your next adventure..."></textarea>
                 </div>
-                <button type="submit" className="w-full bg-white text-black py-6 rounded-2xl font-black text-[10px] uppercase tracking-[0.3em] hover:bg-zinc-200 transition-all">
+                <button id="submit-button" type="submit" className="w-full bg-white text-black py-6 rounded-2xl font-black text-[10px] uppercase tracking-[0.3em] hover:bg-zinc-200 transition-all">
                   Transmit Request
                 </button>
               </div>

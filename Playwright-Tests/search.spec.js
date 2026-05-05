@@ -10,7 +10,7 @@ test('has title', async ({ page }) => {
 
 test('search works', async ({ page }) => {
   await page.goto('/');
-  await page.fill('input[placeholder*="Search"]', 'beach');
-  await page.click('button:text("Search")');
+  await page.fill('input[id="search-input"]', 'beach');
+  await page.click('button[id="search-button"]');
   await expect(page.locator('text=Recommendations')).toBeVisible();
 });
