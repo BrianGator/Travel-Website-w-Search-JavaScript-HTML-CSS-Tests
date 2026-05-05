@@ -1,6 +1,5 @@
-/**
- * written by Brian McCarthy
- */
+written by Brian McCarthy
+
 # TravelBloom
 
 A premium travel recommendation platform built for the JavaScript Essentials course final project.
