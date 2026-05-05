@@ -1,6 +1,4 @@
-written by Brian McCarthy
-
-# TravelBloom
+# TravelBloom Travel-Website-w-Search-JavaScript-HTML-CSS-Tests
 
 A premium travel recommendation platform built for the JavaScript Essentials course final project.
 
