@@ -1,6 +1,4 @@
-/**
- * written by Brian McCarthy
- */
+
 # TravelBloom — Premium Travel Recommendations
 
 TravelBloom is a sophisticated, interactive web application designed to provide high-end travel recommendations across various continents. This platform serves as a curated digital concierge, offering users an intuitive way to explore prestigious destinations, spiritual landmarks, and world-renowned coastal retreats.
