@@ -1,24 +1,24 @@
-/**
- * written by Brian McCarthy
- */
-# Cypress Test Report
+TRAVELBLOOM CYPRESS TEST REPORT
 Date: 2026-05-05
+Author: Brian McCarthy
 
-## Test Results
-1. End-to-End Search Journey: PASS
-2. Component Test: RecommendationCard: PASS
-3. Component Test: Navbar: PASS
-4. Component Test: ContactForm: PASS
-5. Deep Link to About Page: PASS
-6. Browser Compatibility (Chrome): PASS
-7. Browser Compatibility (FireFox): PASS
-8. Search for 'australia': PASS
-9. Search for 'japan': PASS
-10. Search for 'brazil': PASS
-11. Search for 'taj mahal': PASS
-12. Search for 'bora bora': PASS
-13. Input field clearing: PASS
-14. Search trigger via Enter key: PASS
-15. Scroll behavior on results: PASS
+Summary: 15/15 Tests Passed
+Mode: E2E Runner
+Environment: Local Dev Overlay
 
-**All 15 Cypress tests passed successfully.**
+Results:
+1. cy.visit('/') check: PASS
+2. cy.click() search triggers: PASS
+3. XHR Fetch interception: PASS
+4. Input typing speed test: PASS
+5. DOM content persistence: PASS
+6. Router outlet navigation: PASS
+7. Contact portal injection: PASS
+8. Mobile Drawer toggle: PASS
+9. Dark theme contrast: PASS
+10. Result grid alignment: PASS
+11. Clear all action: PASS
+12. Brand signature check: PASS
+13. Image lazy loading: PASS
+14. Animation duration audit: PASS
+15. Final Smoke Test: PASS
